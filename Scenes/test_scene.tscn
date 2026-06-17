@@ -1,17 +1,11 @@
 [gd_scene format=3 uid="uid://dwmae66o74i3s"]
 
-[ext_resource type="Texture2D" uid="uid://bjigtsf4b5s5k" path="res://icon.svg" id="1_3dogw"]
 [ext_resource type="PackedScene" uid="uid://msoiyrh7n27u" path="res://ObejctScenes/player.tscn" id="2_r5l72"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r5l72"]
-size = Vector2(313, 20)
+size = Vector2(1058, 20)
 
 [node name="TestScene" type="Node2D" unique_id=1748159899]
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=1087434005]
-position = Vector2(285.75, 218.00002)
-scale = Vector2(2.457031, 0.21875)
-texture = ExtResource("1_3dogw")
 
 [node name="Player" parent="." unique_id=2030322048 instance=ExtResource("2_r5l72")]
 position = Vector2(207, 167)
@@ -19,5 +13,12 @@ position = Vector2(207, 167)
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=976586350]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=105338961]
-position = Vector2(285.5, 214)
+position = Vector2(658, 214)
 shape = SubResource("RectangleShape2D_r5l72")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=180959163]
+offset_left = 127.0
+offset_top = 203.0
+offset_right = 1183.0
+offset_bottom = 225.0
+color = Color(0, 0, 0, 1)

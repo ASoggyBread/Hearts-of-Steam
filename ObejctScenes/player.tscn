@@ -1,21 +1,63 @@
 [gd_scene format=3 uid="uid://msoiyrh7n27u"]
 
 [ext_resource type="Script" uid="uid://c2j486um5gc06" path="res://Scripts/player.gd" id="1_8lqxc"]
-[ext_resource type="Texture2D" uid="uid://bsf1lm3grjexw" path="res://Art/RobotCop1.png" id="2_qukiw"]
+[ext_resource type="Texture2D" uid="uid://yun6p1pue12v" path="res://Art/RobotCop.png" id="2_qukiw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygk2t"]
-size = Vector2(25, 39)
+size = Vector2(24, 39)
+
+[sub_resource type="Animation" id="Animation_ygk2t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_1k35d"]
+resource_name = "walking_right"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.8626451e-07, 0.06666686, 0.13333352, 0.2000002, 0.26666686, 0.33333352, 0.40000015, 0.46666682, 0.53333354, 0.60000014, 0.66666675, 0.73333335),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ectai"]
+_data = {
+&"RESET": SubResource("Animation_ygk2t"),
+&"walking": SubResource("Animation_1k35d")
+}
 
 [node name="Player" type="CharacterBody2D" unique_id=2030322048]
 script = ExtResource("1_8lqxc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1012846728]
 texture = ExtResource("2_qukiw")
+hframes = 4
+vframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1421935798]
-position = Vector2(0.5, -3.5)
+position = Vector2(1, -3.5)
 shape = SubResource("RectangleShape2D_ygk2t")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=428338905]
 position = Vector2(0.5, -3.5)
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1292176128]
+libraries/ = SubResource("AnimationLibrary_ectai")
