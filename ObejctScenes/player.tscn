@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://msoiyrh7n27u"]
+
+[ext_resource type="Script" uid="uid://c2j486um5gc06" path="res://Scripts/player.gd" id="1_8lqxc"]
+[ext_resource type="Texture2D" uid="uid://bsf1lm3grjexw" path="res://Art/RobotCop1.png" id="2_qukiw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygk2t"]
+size = Vector2(25, 39)
+
+[node name="Player" type="CharacterBody2D" unique_id=2030322048]
+script = ExtResource("1_8lqxc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1012846728]
+texture = ExtResource("2_qukiw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1421935798]
+position = Vector2(0.5, -3.5)
+shape = SubResource("RectangleShape2D_ygk2t")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=428338905]
+position = Vector2(0.5, -3.5)
+zoom = Vector2(2, 2)
