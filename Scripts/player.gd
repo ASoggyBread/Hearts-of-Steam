@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
-@onready var anim_player: AnimationPlayer = $AnimationPlayer
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
 @export var leg_programme:Programme
 
@@ -16,13 +15,13 @@ var jump_speed = max_jump_speed
 func animate(velX:int,velY:int):
 	if velX != 0:
 		if velX > 0:
-			sprite.scale = Vector2(1,1)
+			anim.scale = Vector2(1,1)
 		else:
-			sprite.scale = Vector2(-1,1)
-		if not anim_player.is_playing():
-			anim_player.play("walking")
+			anim.scale = Vector2(-1,1)
+		if not anim.is_playing():
+			anim.play("walk")
 	else:
-		anim_player.play("RESET")
+		anim.stop()
 func get_input():
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
