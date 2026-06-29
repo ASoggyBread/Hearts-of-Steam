@@ -2,8 +2,6 @@ extends CharacterBody2D
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
-@export var leg_programme:Programme
-
 var max_health = 100
 var health = max_health
 
@@ -35,14 +33,7 @@ func get_input():
 		velocity.x = move_toward(velocity.x, 0, speed)
 
 func _ready() -> void:
-	if leg_programme:
-		var stats = leg_programme.stats
-		for stat in leg_programme.stats:
-			pass
-
-	health = max_health
-	speed = max_speed
-	jump_speed = max_jump_speed
+	pass
 	
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cifuviffknskb"
-path="res://.godot/imported/k-11run-sheet.png-0302db57f35273851e4f630d7ea42cbd.ctex"
+uid="uid://yun6p1pue12v"
+path="res://.godot/imported/RobotCop.png-d7993791b3d9e5878dc9c292656439ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/k-11run-sheet.png"
-dest_files=["res://.godot/imported/k-11run-sheet.png-0302db57f35273851e4f630d7ea42cbd.ctex"]
+source_file="res://Assets/Art/RobotCop.png"
+dest_files=["res://.godot/imported/RobotCop.png-d7993791b3d9e5878dc9c292656439ce.ctex"]
 
 [params]
 

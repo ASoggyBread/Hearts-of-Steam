@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://msoiyrh7n27u"]
 
 [ext_resource type="Script" uid="uid://c2j486um5gc06" path="res://Scripts/player.gd" id="1_8lqxc"]
-[ext_resource type="Texture2D" uid="uid://cifuviffknskb" path="res://Art/k-11run-sheet.png" id="3_1k35d"]
-[ext_resource type="Script" uid="uid://v2t7snd314tm" path="res://Scripts/programme.gd" id="3_ygk2t"]
+[ext_resource type="Texture2D" uid="uid://cifuviffknskb" path="res://Assets/Art/k-11run-sheet.png" id="3_1k35d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygk2t"]
 size = Vector2(18, 38)
@@ -99,9 +98,8 @@ animations = [{
 "speed": 14.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=2030322048 node_paths=PackedStringArray("leg_programme")]
+[node name="Player" type="CharacterBody2D" unique_id=2030322048]
 script = ExtResource("1_8lqxc")
-leg_programme = NodePath("TestProgramme")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1421935798]
 position = Vector2(0, -3)
@@ -110,14 +108,6 @@ shape = SubResource("RectangleShape2D_ygk2t")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1783164408]
 zoom = Vector2(3, 3)
 
-[node name="TestProgramme" type="Node" parent="." unique_id=1437006824]
-script = ExtResource("3_ygk2t")
-programme_type = 2
-speed = 100000
-jump_speed = 10000000
-metadata/_custom_type_script = "uid://v2t7snd314tm"
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1802012534]
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"walk"
-frame_progress = 0.9300401
