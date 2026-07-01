@@ -10,6 +10,17 @@ var speed = max_speed
 var max_jump_speed = -400.0
 var jump_speed = max_jump_speed
 
+enum directions{
+	right,
+	left,
+	up,
+	down,
+	up_right,
+	up_left,
+	down_right,
+	down_left
+}
+
 func animate(velX:int,velY:int):
 	if velX != 0:
 		if velX > 0:
